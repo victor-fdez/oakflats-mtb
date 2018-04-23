@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "name": "Pro & Cat 1",
+      "friendlyName": "expert",
+      "category name": "PRO & Cat 1 Men/Women",
+      "subcategories": [
+        "30-39 & SS",
+        "40-49",
+        "19-29",
+        "50+",
+        "Juniors 9-18",
+        "Women"
+      ],
+      "miles": 26,
+      "laps": 6,
+      "start time": "2018-07-29T10:00:00",
+      "entry fee": {
+        "adults": 60,
+        "juniors": 30
+      }
+    },
+    {
+      "name": "Cat 2",
+      "friendlyName": "sport",
+      "category name": "",
+      "subcategories": [
+        "30-39 & SS",
+        "40-49",
+        "19-29",
+        "50+",
+        "Juniors 9-18",
+        "Women"
+      ],
+      "miles": 21.5,
+      "laps": 5,
+      "start time": "2018-07-29T10:05:00",
+      "entry fee": {
+        "adults": 60,
+        "juniors": 30
+      }
+    },
+    {
+      "name": "Cat 3",
+      "friendlyName": "beginner",
+      "category name": "",
+      "subcategories": [
+        "30-39",
+        "40-49",
+        "19-29",
+        "50+",
+        "Juniors 9-18",
+        "Women"
+      ],
+      "miles": 17,
+      "laps": 4,
+      "start time": "2018-07-29T08:00:00",
+      "entry fee": {
+        "adults": 60,
+        "juniors": 30
+      }
+    },
+    {
+      "name": "Youth 6-8yrs",
+      "friendlyName": "",
+      "category name": "",
+      "miles": 1.5,
+      "laps": 1,
+      "start time": "2018-07-29T10:15:00",
+      "entry fee": {
+        "juniors": 0
+      }
+    },
+    {
+      "name": "Roadrunners ≤ 6yrs",
+      "friendlyName": "",
+      "category name": "",
+      "miles": 1.5,
+      "laps": 1,
+      "entry fee": {
+        "all": 0
+      }
+    }
+  ]
+}

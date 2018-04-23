@@ -1,0 +1,38 @@
+.parallaxChildren {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: white;
+    font-size: 4vw;
+    font-weight: normal;
+  }
+  h3.event-date {
+    color: white;
+    font-size: 2vw;
+    font-weight: normal;
+  }
+}
+
+.bannerBg {
+  background: #fff;
+}
+
+.registerNow {
+  margin-bottom: '10px';
+}
+
+.countdown {
+  span {
+    color: #fff;
+    span {
+      text-decoration: underline;
+    }
+  }
+}
