@@ -68,8 +68,8 @@ export const pageQuery = graphql`
         layout
         title
         path
-        categories
-        date(formatString: "YYYY/MM/DD")
+        #categories
+        #date(formatString: "YYYY/MM/DD")
       }
     }
   }

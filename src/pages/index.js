@@ -114,8 +114,6 @@ class Index extends React.Component {
   }
 }
 
-export default Index
-
 export const pageQuery = graphql`
   query IndexQuery {
     site {
@@ -140,3 +138,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default Index

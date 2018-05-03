@@ -45,8 +45,6 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
   }
 }
 
-//console.log(styles)
-
 class TopParallax extends React.Component {
   constructor(props) {
     super(props)
@@ -56,24 +54,9 @@ class TopParallax extends React.Component {
     let $ = typeof window !== 'undefined' && window.$
     if ($) width = $('body').width()
     else width = typeof window !== 'undefined' && window.innerWidth
-    const imageSet = imageProp.srcSet
-      .replace(/,/g, '')
-      .split('\n')
-      .map(link => {
-        let url, widthp, rest
-        ;[url, widthp, ...rest] = link.split(' ')
-        let width = parseInt(widthp.replace('w', ''))
-        return { url, width }
-      })
-      .sort((a, b) => {
-        if (a.width < b.width) return -1
-        else if (a.width > b.width) return 1
-        else return 0
-      })
     const height = 500 //width > 750 ? 500 : ( width > 400 ? 300 : 250 )
     this.state = {
       viewport: { width, height },
-      imageSet,
       date,
       title,
       image,
@@ -94,7 +77,6 @@ class TopParallax extends React.Component {
     let width
     let { imageSet } = this.state
     if ($) width = $('body').width() || window.innerWidth
-    const image = this.pickImage(imageSet, width)
     const height = 500 //width > 750 ? 500 : ( width > 400 ? 300 : 250 )
     this.setState({
       viewport: {
@@ -106,25 +88,9 @@ class TopParallax extends React.Component {
     this.forceUpdate()
   }
 
-  pickImage(imageSet, width) {
-    var i, image
-    //for (i = 0; i < imageSet.length; i++) {
-    //  image = imageSet[i]
-    //  if (width <= image.width) {
-    //    return image.url
-    //  } else if (i == imageSet.length-1) {
-    //    return image.url
-    //  }
-    //}
-    return imageSet[imageSet.length - 1].url
-  }
-
   render() {
     const data = this.state
-    const { imageSet, image, date, title, viewport: { width, height } } = data
-    //console.log(image)
-    //console.log(imageSet)
-    //console.log(width)
+    const { image, date, title, viewport: { width, height } } = data
     const options = {
       weekday: 'long',
       year: 'numeric',

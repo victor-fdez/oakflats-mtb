@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-bootstrap",
-  "description": "Simple starter for Gatsby",
+  "name": "oakflats-mtb",
+  "description": "Oakflats 2018 MTB website",
   "version": "1.9.119",
-  "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
+  "author": "Victor Fernandez <victor.j.fdez@gmail.com>",
   "dependencies": {
     "dotenv": "^5.0.1",
     "gatsby": "^1.9.130",

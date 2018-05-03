@@ -22,8 +22,10 @@ class MapWithMarker extends React.Component {
   }
 
   componentDidMount() {
+    let map = this.refs.child.getMap()
     window.addEventListener('resize', this._resize)
     this._resize()
+    map.resize()
   }
 
   componentWillUnmount() {
@@ -51,7 +53,11 @@ class MapWithMarker extends React.Component {
     const { viewport, point } = this.state
     //console.log(`width: ${viewport.width}`)
     return (
-      <StaticMap {...viewport} onViewportChange={this._updateViewport}>
+      <StaticMap
+        {...viewport}
+        ref="child"
+        onViewportChange={this._updateViewport}
+      >
         <Marker {...point}>
           <svg
             fill="#000000"

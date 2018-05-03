@@ -63,10 +63,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
-        description: 'Gatsby starter for bootstrap a blog',
-        homepage_url: 'https://gatstrap.netlify.com',
+        name: 'Oakflats',
+        short_name: 'Oakflats MTB',
+        description: 'Oakflats MTB website',
+        homepage_url: 'https://oakflatsmtb.com',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',

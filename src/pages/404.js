@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Headline1, SingleCol, Container, Col } from '../components/Typography'
+import { SingleCol, Container } from '../components/Typography'
 
 const ErrorPage = () => {
   return (

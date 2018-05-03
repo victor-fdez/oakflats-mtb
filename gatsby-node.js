@@ -39,9 +39,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           createPage({
             path: edge.node.frontmatter.path,
             component: blogPost,
-            context: {
+            /*context: {
               path: edge.node.frontmatter.path,
-            },
+            }*/
           })
         })
       })

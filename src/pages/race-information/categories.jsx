@@ -37,7 +37,6 @@ const Row = ({ headers, category }) => {
   }
   const license = 'USAC'
   const entryFees = Object.entries(category[headers['Entry Fee']])
-  console.log(entryFees)
   return (
     <tr>
       <td className="text-center align-middle">
