@@ -7,13 +7,11 @@ module.exports = {
     twitter: 'victor755555',
     adsense: '',
     date: '2018-07-29T08:00:00',
-    mapStyle: process.env.MapboxStyle,
     location: {
       height: 400,
       latitude: 35.0768929,
       longitude: -106.4234018,
       zoom: 11,
-      mapStyle: process.env.MapboxStyle,
       point: {
         latitude: 35.0416097,
         longitude: -106.3598362,

@@ -1,0 +1,35 @@
+Resources:
+  OakflatsS3Web:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      AccessControl: "PublicRead"
+      BucketName: "oakflats-web"
+      Tags:
+        - Key: WebsiteName
+          Value: Oakflats
+        - Key: Static
+          Value: True
+  OakflatsCDN:
+    Type: "AWS::CloudFront::Distribution"
+    Properties:
+      DistributionConfig:
+        Origins:
+        - DomainName: !GetAtt OakflatsS3Web.DomainName 
+          Id: "OakflatsS3Origin"
+          #OriginPath: / 
+          CustomOriginConfig:
+            OriginProtocolPolicy: "http-only"
+        Aliases:
+        - www.oakflats-mtb.com
+        - oakflats-mtb.com
+        DefaultCacheBehavior:
+          Compress: True
+          ForwardedValues:
+            Cookies:  
+              Forward: none
+            QueryString: False
+          TargetOriginId: "OakflatsS3Origin"
+          ViewerProtocolPolicy: "redirect-to-https"
+        DefaultRootObject: /index.html
+        Enabled: True
+

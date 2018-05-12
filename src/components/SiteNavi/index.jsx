@@ -39,6 +39,7 @@ class SiteNavi extends React.Component {
             <ul className="navbar-nav mr-auto">
               {[
                 'registration',
+                'results',
                 ['race information', 'course', 'categories', 'accomodations'],
                 'news',
                 'contact',
