@@ -7,8 +7,10 @@
 GatsbyJS Statically Generated Website for Oakflats Race
 
 ## Usage
+  
 develop
 `npm run develop`
+  
 production
 `npm run build`
 

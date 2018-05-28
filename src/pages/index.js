@@ -71,9 +71,7 @@ class Index extends React.Component {
           </RowSeparator>
           <SingleCol>
             <div className="text-center">
-              <Link to={'/race-information/categories/'}>
-                more category info
-              </Link>
+              <Link to={'/info/categories/'}>more category info</Link>
             </div>
           </SingleCol>
           <hr css={{ marginTop: '2em' }} />
