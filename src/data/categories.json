@@ -1,4 +1,78 @@
 {
+  "sponsors": [
+    {
+      "name": "Oky",
+      "type": "gold",
+      "photo": "00-oky.png",
+      "website": "http://www.okyconstruction.com/"
+    },
+    {
+      "name": "ABQ Home Pricing",
+      "type": "gold",
+      "photo": "01-abq-home-pricing.png",
+      "website": "http://www.abqhomepricing.com/"
+    },
+    {
+      "name": "High Desert Bicycle",
+      "type": "gold",
+      "photo": "02-high-desert-bycycles.png",
+      "website": "http://highdesertbicycles.com/"
+    },
+    {
+      "name": "State Farm",
+      "type": "gold",
+      "photo": "03-state-farm.png",
+      "website": "https://timgallegos.com/"
+    },
+    {
+      "name": "TLC",
+      "type": "gold",
+      "photo": "04-tlc.png",
+      "website": "https://www.tlcplumbing.com/"
+    },
+    {
+      "name": "Elevate",
+      "type": "gold",
+      "photo": "05-elevate.png",
+      "website": "https://elevatephw.com/"
+    },
+    {
+      "name": "Kaktus Brewery",
+      "type": "silver",
+      "photo": "06-kaktus-brewery.jpg",
+      "website": "http://www.kaktusbrewery.com/"
+    },
+    {
+      "name": "Jarritos",
+      "type": "silver",
+      "photo": "07-jarritos.png",
+      "website": "https://jarritos.com/"
+    },
+    {
+      "name": "California Pizza Kitchen",
+      "type": "silver",
+      "photo": "091-cpk.png",
+      "website": "https://www.cpk.com/"
+    },
+    {
+      "name": "El Famoso 13",
+      "type": "silver",
+      "photo": "09-famoso-13.png",
+      "website": "/"
+    },
+    {
+      "name": "Performance Bicycle",
+      "type": "silver",
+      "photo": "092-performance-bikes.png",
+      "website": "https://www.performancebike.com"
+    },
+    {
+      "name": "Broadway Truck",
+      "type": "silver",
+      "photo": "08-broadway-truck.jpg",
+      "website": "http://www.broadwaytrucks.com/"
+    }
+  ],
   "categories": [
     {
       "name": "Pro & Cat 1",
@@ -14,10 +88,10 @@
       ],
       "miles": 26,
       "laps": 6,
-      "start time": "2018-07-29T10:00:00",
+      "start time": "2018-07-29T10:30:00",
       "entry fee": {
-        "adults": 60,
-        "juniors": 30
+        "adults": 55,
+        "juniors": 25
       }
     },
     {
@@ -25,7 +99,7 @@
       "friendlyName": "sport",
       "category name": "",
       "subcategories": [
-        "30-39 & SS",
+        "30-39",
         "40-49",
         "19-29",
         "50+",
@@ -34,10 +108,10 @@
       ],
       "miles": 21.5,
       "laps": 5,
-      "start time": "2018-07-29T10:05:00",
+      "start time": "2018-07-29T10:35:00",
       "entry fee": {
-        "adults": 60,
-        "juniors": 30
+        "adults": 55,
+        "juniors": 25
       }
     },
     {
@@ -52,21 +126,22 @@
         "Juniors 9-18",
         "Women"
       ],
-      "miles": 17,
-      "laps": 4,
+      "miles": 12.9,
+      "laps": 3,
       "start time": "2018-07-29T08:00:00",
       "entry fee": {
-        "adults": 60,
-        "juniors": 30
+        "adults": 55,
+        "juniors": 25
       }
     },
     {
       "name": "Youth 6-8yrs",
       "friendlyName": "",
       "category name": "",
-      "miles": 1.5,
-      "laps": 1,
-      "start time": "2018-07-29T10:15:00",
+      "subcategories": ["need to register online"],
+      "miles": 1,
+      "laps": 3,
+      "start time": "2018-07-29T10:00:00",
       "entry fee": {
         "juniors": 0
       }
@@ -75,8 +150,10 @@
       "name": "Roadrunners ≤ 6yrs",
       "friendlyName": "",
       "category name": "",
-      "miles": 1.5,
+      "subcategories": ["need to register online"],
+      "miles": 0.3,
       "laps": 1,
+      "start time": "2018-07-29T10:00:00",
       "entry fee": {
         "all": 0
       }

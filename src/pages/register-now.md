@@ -12,7 +12,7 @@ path: "/register-now/"
 
 Online registration closes at 10:00pm Friday July 27th, 2018
 
-[Registration Now!](http://www.newmexicosportsonline.com/MountainBiking/Oakflats-MTB-Race-2017/55237)  
+[Registration Now!](https://www.usacycling.org/events)  
 <span class="text-secondary">Link to USACycling</span>
 
 * register before July 10th to get a T-Shirt [Limited to 140]

@@ -91,17 +91,5 @@ const Categories = ({}) => {
     </Container>
   )
 }
-/*
-* **Pro & Cat 1 (Expert) :**  6 laps - 26 miles
-  * Starts at 10:30am  
-* **Cat 2 (Sport) :** 5 laps - 21.5 miles
-  * Starts at 10:30am  
-* **Cat 3 (Beginner) :** 4 laps - 17 miles
-  * Starts at 8:00am  
-* **Youth 6-8yrs :** 3 laps - 1.5 miles (Special Course)
-  * Starts at 10:00am  
-* **Roadrunners 6yrs and under :** Parent supervision required 
-  * Starts at 10:00am  
-  * */
 
 export default Categories

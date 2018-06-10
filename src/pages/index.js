@@ -11,14 +11,24 @@ import RowSeparator from '../components/RowSeparator/'
 import image from '../static/img/manzano-mountains.jpg'
 import { Headline1, SingleCol, Container, Col } from '../components/Typography'
 import SiteFooter from '../components/SiteFooter'
-import { categories } from '../data/categories.json'
+import { categories, sponsors as newSponsors } from '../data/categories.json'
 
-function importAll(r) {
-  return r.keys().map(r)
-}
+//function importAll(r) {
+//  return r.keys().map(r)
+//}
+//
+//const sponsors = importAll(
+//  require.context('../static/img/sponsors/', false, /\.(png|jpe?g|svg)$/)
+//)
 
-const sponsors = importAll(
-  require.context('../static/img/sponsors/', false, /\.(png|jpe?g|svg)$/)
+const loadedSponsors = newSponsors.map(s => {
+  s.photo = require('../static/img/sponsors/' + s.photo)
+  return s
+})
+
+const goldSponsors = loadedSponsors.filter(sponsor => sponsor.type == 'gold')
+const silverSponsors = loadedSponsors.filter(
+  sponsor => sponsor.type == 'silver'
 )
 
 class Index extends React.Component {
@@ -78,22 +88,46 @@ class Index extends React.Component {
           {/* sponsors */}
           <Headline1>Sponsors</Headline1>
           <RowSeparator elementsPerRow={4} RowRenderer={Col}>
-            {sponsors.map((sponsor, idx) => (
+            {goldSponsors.map((sponsor, idx) => (
               <div
                 className="col-md-3 col-sm-1 col-xs-1 text-center"
                 css={{ marginBottom: '2em' }}
                 key={idx}
               >
-                <img
-                  src={sponsor}
-                  css={{
-                    display: 'block',
-                    maxWidth: '100%',
-                    height: 'auto',
-                    maxHeight: '200',
-                    margin: 'auto auto',
-                  }}
-                />
+                <a href={sponsor.website}>
+                  <img
+                    src={sponsor.photo}
+                    css={{
+                      display: 'block',
+                      maxWidth: '100%',
+                      height: 'auto',
+                      maxHeight: '200',
+                      margin: 'auto auto',
+                    }}
+                  />
+                </a>
+              </div>
+            ))}
+          </RowSeparator>
+          <RowSeparator elementsPerRow={6} RowRenderer={Col}>
+            {silverSponsors.map((sponsor, idx) => (
+              <div
+                className="col-md-2 col-sm-2 col-xs-2 text-center"
+                css={{ marginBottom: '2em' }}
+                key={idx}
+              >
+                <a href={sponsor.website}>
+                  <img
+                    src={sponsor.photo}
+                    css={{
+                      display: 'block',
+                      maxWidth: '100%',
+                      height: 'auto',
+                      maxHeight: '130',
+                      margin: 'auto auto',
+                    }}
+                  />
+                </a>
               </div>
             ))}
           </RowSeparator>

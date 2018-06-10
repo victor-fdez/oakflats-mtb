@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Oakflats MTB',
     description: 'Oakflats MTB Race Website',
-    siteUrl: 'https://oakflats.com',
+    siteUrl: 'https://www.oakflatsmtb.com',
     author: 'victor-fdez',
     twitter: 'victor755555',
     adsense: '',
@@ -64,7 +64,7 @@ module.exports = {
         name: 'Oakflats',
         short_name: 'Oakflats MTB',
         description: 'Oakflats MTB website',
-        homepage_url: 'https://oakflatsmtb.com',
+        homepage_url: 'https://www.oakflatsmtb.com',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
@@ -86,7 +86,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: '',
+        trackingId: 'UA-120605156-1',
       },
     },
     'gatsby-plugin-glamor',

@@ -14,8 +14,7 @@ const changePageMaps = () => {
 }
 
 const changePageRegistration = () => {
-  window.location.href =
-    'https://www.newmexicosportsonline.com/MountainBiking/Oakflats-MTB-Race-2017/55237'
+  window.location.href = 'https://www.usacycling.org/events'
 }
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
