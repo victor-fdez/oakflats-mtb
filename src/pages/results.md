@@ -1,6 +1,8 @@
 ---
 title: Results 
 layout: post
+brief: "Oakflats Bike Race in Albuquerque, New Mexico : Race Results of Past Bike Races"
+tags: ["info", "results", "race"]
 path: "/results/"
 ---
 

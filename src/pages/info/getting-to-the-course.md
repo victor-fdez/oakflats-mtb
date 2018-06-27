@@ -1,6 +1,7 @@
 ---
 title: Getting To The Course 
 layout: post
+brief: "Oakflats Bike Race in Albuquerque, New Mexico : Direction to get to the bike Race from Albuquerque" 
 path: "/info/getting-to-the-course/"
 ---
 

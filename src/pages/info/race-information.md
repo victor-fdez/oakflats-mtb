@@ -1,6 +1,7 @@
 ---
 title: Race Information 
 layout: post
+brief: "Oakflats Bike Race in Albuquerque, New Mexico : General websites and contact information to stay informed about the race" 
 path: "/info/race-information/"
 ---
 

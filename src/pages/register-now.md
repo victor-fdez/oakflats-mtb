@@ -1,7 +1,9 @@
 ---
-title: Registration
+title: Oakflats Registration
 layout: post
+brief: "Oakflats Bike Race in Albuquerque, New Mexico : Race Registration ins and outs to get you ready before race day"
 path: "/register-now/"
+tags: ["info", "registration", "race"]
 ---
 
 <div class="text-center">
@@ -12,7 +14,7 @@ path: "/register-now/"
 
 Online registration closes at 10:00pm Friday July 27th, 2018
 
-[Registration Now!](https://www.usacycling.org/events)  
+[Registration Now!](https://legacy.usacycling.org/myusac/index.php?pagename=registration&eventid=2046&year=2018)  
 <span class="text-secondary">Link to USACycling</span>
 
 * register before July 10th to get a T-Shirt [Limited to 140]

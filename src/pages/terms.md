@@ -1,6 +1,8 @@
 ---
 title: Terms 
 layout: post
+brief: "Oakflats Bike Race in Albuquerque, New Mexico : Terms and Conditions of the Oakflats MTB race"
+tags: ["info", "terms"]
 path: "/terms/"
 ---
 <h2>Oakflats 2018 Terms of Service</h2>

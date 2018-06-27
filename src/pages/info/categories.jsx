@@ -1,19 +1,33 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { categories } from '../../data/categories.json'
 import { SingleCol, Container } from '../../components/Typography'
 
 const TableHeader = ({ headers }) => {
   const headings = headers
+  const title = 'Oakflats Race Categories'
+  const description =
+    'Oakflats Bike Race in Albuquerque, New Mexico : The Categories for the Bike Race. These categories conform to the USA cycling required categories.'
+  const tags = ['Oakflats', 'Bike', 'Race', 'ABQ', 'Albuquerque', 'New Mexico']
   return (
-    <thead>
-      <tr>
-        {headings.map((header, idx) => (
-          <th className="text-center" scope="col" key={idx}>
-            {header}
-          </th>
-        ))}
-      </tr>
-    </thead>
+    <React.Fragment>
+      <Helmet
+        title={title}
+        meta={[
+          { name: 'description', content: description },
+          { name: 'keywords', content: tags.join(', ') },
+        ]}
+      />
+      <thead>
+        <tr>
+          {headings.map((header, idx) => (
+            <th className="text-center" scope="col" key={idx}>
+              {header}
+            </th>
+          ))}
+        </tr>
+      </thead>
+    </React.Fragment>
   )
 }
 

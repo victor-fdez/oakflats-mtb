@@ -6,7 +6,7 @@ import Countdown from 'react-countdown-now'
 import { css } from 'glamor'
 import Img from 'gatsby-image'
 import { parallaxChildren, registerNow, countdown } from './style.scss'
-import oakflatsLogo from '../../../static/img/oakflats-2018.jpg'
+import oakflatsLogo from '../../../static/img/oakflats-2018.png'
 import './style.scss'
 
 const changePageMaps = () => {
@@ -14,7 +14,8 @@ const changePageMaps = () => {
 }
 
 const changePageRegistration = () => {
-  window.location.href = 'https://www.usacycling.org/events'
+  window.location.href =
+    'https://legacy.usacycling.org/myusac/index.php?pagename=registration&eventid=2046&year=2018'
 }
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {

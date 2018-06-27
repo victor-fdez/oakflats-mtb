@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import size from 'lodash/size'
 import Adsense from '../Adsense'
 import ReadNext from '../ReadNext'
+import Helmet from 'react-helmet'
 import './style.scss'
 
 class SitePost extends React.Component {
@@ -51,6 +52,8 @@ class SitePost extends React.Component {
     const html = get(data, 'html')
     const description =
       get(data, 'frontmatter.description') || this.description(html)
+    const brief = get(data, 'frontmatter.brief', '')
+    const tags = get(data, 'frontmatter.tags', [])
     const cate =
       get(data, 'frontmatter.category') || get(data, 'frontmatter.categories')
     const isMore = isIndex && !!html.match('<!--more-->')
@@ -59,29 +62,36 @@ class SitePost extends React.Component {
     ) : (
       <Adsense clientId={site.meta.adsense} slotId="" format="auto" />
     )
-
     return (
-      <div className="container">
-        <div className="articles col-md-12">
-          <div className="article-wrap" key={path}>
-            <div className="page-header">
-              <Link style={{ boxShadow: 'none' }} to={path}>
-                <h1>{title}</h1>
-                <time dateTime={date}>{date}</time>
-              </Link>
-              {this.categories(cate)}
+      <Fragment>
+        <Helmet>
+          <title>{title}</title>
+          <meta name="description" content={brief} />
+        </Helmet>
+        <div className="container">
+          <div className="articles col-md-12">
+            <div className="article-wrap" key={path}>
+              <div className="page-header">
+                <Link style={{ boxShadow: 'none' }} to={path}>
+                  <h1>{title}</h1>
+                  <time dateTime={date}>{date}</time>
+                </Link>
+                {this.categories(cate)}
+              </div>
+              {ad}
+              <div
+                className="page-content"
+                dangerouslySetInnerHTML={{
+                  __html: isMore ? description : html,
+                }}
+              />
+              {isMore ? this.more(path) : ''}
+              {ad}
+              {isIndex ? '' : <ReadNext data={site} />}
             </div>
-            {ad}
-            <div
-              className="page-content"
-              dangerouslySetInnerHTML={{ __html: isMore ? description : html }}
-            />
-            {isMore ? this.more(path) : ''}
-            {ad}
-            {isIndex ? '' : <ReadNext data={site} />}
           </div>
         </div>
-      </div>
+      </Fragment>
     )
   }
 }

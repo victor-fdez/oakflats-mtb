@@ -22,6 +22,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 node {
                   frontmatter {
                     path
+                    tags
+                    brief
                   }
                 }
               }

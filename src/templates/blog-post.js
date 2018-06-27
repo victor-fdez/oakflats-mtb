@@ -12,6 +12,12 @@ class BlogPostTemplate extends React.Component {
     const site = get(this, 'props.data.site')
     const layout = get(post, 'frontmatter.layout')
     const title = get(post, 'frontmatter.title')
+    const brief = get(
+      post,
+      'frontmatter.description',
+      'Oakflats Bike Race in Albuquerque'
+    )
+    const tags = get(post, 'frontmatter.tags', []) || []
     const siteTitle = get(site, 'meta.title')
 
     let template = ''
@@ -25,6 +31,8 @@ class BlogPostTemplate extends React.Component {
         <Helmet
           title={`${title} | ${siteTitle}`}
           meta={[
+            { name: 'description', content: brief },
+            { name: 'keywords', content: tags.join(', ') },
             { name: 'twitter:card', content: 'summary' },
             { name: 'twitter:site', content: `@${get(site, 'meta.twitter')}` },
             { property: 'og:title', content: get(post, 'frontmatter.title') },
@@ -54,7 +62,6 @@ export const pageQuery = graphql`
     site {
       meta: siteMetadata {
         title
-        description
         url: siteUrl
         author
         twitter
@@ -66,6 +73,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         layout
+        brief
+        tags
         title
         path
         #categories

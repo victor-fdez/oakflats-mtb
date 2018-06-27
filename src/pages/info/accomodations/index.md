@@ -1,6 +1,8 @@
 ---
 title: Accomodations 
 layout: post
+brief: "Oakflats Bike Race in Albuquerque, New Mexico : Camping and Staying at the Bike Race event" 
+tags: ["info", "maps", "staying", "camping"]
 path: "/info/accomodations/"
 ---
 

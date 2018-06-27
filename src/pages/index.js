@@ -37,12 +37,24 @@ class Index extends React.Component {
     const viewport = { ...location, height: 400 }
     const point = location.point
     const site = get(this, 'props.data.site.siteMetadata')
+    const description =
+      'Oakflats Bike Race in Albuquerque, New Mexico : The Race will Take place on July 29th, 2018 in Oakflats within the Cibola National Forest close by to ABQ'
+    const tags = [
+      'Oakflats',
+      'Bike',
+      'Race',
+      'ABQ',
+      'Albuquerque',
+      'New Mexico',
+    ]
 
     return (
       <div>
         <Helmet
           title={get(site, 'title')}
           meta={[
+            { name: 'description', content: description },
+            { name: 'keywords', content: tags.join(', ') },
             { name: 'twitter:card', content: 'summary' },
             { name: 'twitter:site', content: `@${get(site, 'twitter')}` },
             { property: 'og:title', content: get(site, 'title') },
@@ -87,10 +99,10 @@ class Index extends React.Component {
           <hr css={{ marginTop: '2em' }} />
           {/* sponsors */}
           <Headline1>Sponsors</Headline1>
-          <RowSeparator elementsPerRow={4} RowRenderer={Col}>
+          <Col>
             {goldSponsors.map((sponsor, idx) => (
               <div
-                className="col-md-3 col-sm-1 col-xs-1 text-center"
+                className="col-12 col-md-4 col-sm-6 col-xs-6 text-center"
                 css={{ marginBottom: '2em' }}
                 key={idx}
               >
@@ -108,11 +120,11 @@ class Index extends React.Component {
                 </a>
               </div>
             ))}
-          </RowSeparator>
-          <RowSeparator elementsPerRow={6} RowRenderer={Col}>
+          </Col>
+          <Col>
             {silverSponsors.map((sponsor, idx) => (
               <div
-                className="col-md-2 col-sm-2 col-xs-2 text-center"
+                className="col-6 col-md-2 col-sm-4 col-xs-4"
                 css={{ marginBottom: '2em' }}
                 key={idx}
               >
@@ -130,8 +142,7 @@ class Index extends React.Component {
                 </a>
               </div>
             ))}
-          </RowSeparator>
-
+          </Col>
           <hr css={{ marginTop: '2em' }} />
           {/* location information */}
           <Headline1>Race Location</Headline1>

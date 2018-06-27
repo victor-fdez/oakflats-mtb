@@ -1,6 +1,8 @@
 ---
 title: Maps
 layout: post
+brief: "Oakflats Bike Race in Albuquerque, New Mexico : Maps of the Race setup and important locations to consider during the race" 
+tags: ["info", "maps", "race-day"]
 path: "/info/maps"
 ---
 

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Oakflats MTB',
-    description: 'Oakflats MTB Race Website',
+    description: 'Oakflats Mountain Bike Race Website 2018',
     siteUrl: 'https://www.oakflatsmtb.com',
     author: 'victor-fdez',
     twitter: 'victor755555',

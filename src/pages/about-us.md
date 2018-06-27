@@ -1,6 +1,8 @@
 ---
 title: About Us 
 layout: post
+brief: "Oakflats Bike Race in Albuquerque, New Mexico : Description of the Race and atmosphere"
+tags: ["about-us", "info"]
 path: "/about-us/"
 ---
 

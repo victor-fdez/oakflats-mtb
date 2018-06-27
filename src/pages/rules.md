@@ -1,6 +1,8 @@
 ---
 title: Rules 
 layout: post
+brief: "Oakflats Bike Race in Albuquerque, New Mexico : Rules for abide by in the race"
+tags: ["info", "rules"]
 path: "/rules/"
 ---
 
