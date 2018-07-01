@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { structured } from './data/categories.json'
 
 let stylesStr
 if (process.env.NODE_ENV === 'production') {
@@ -38,6 +39,7 @@ const bootstrap = (
 export default class HTML extends React.Component {
   render() {
     const head = Helmet.rewind()
+    const struct = JSON.stringify(structured, null, 2)
     let css
     if (process.env.NODE_ENV === 'production') {
       css = (
@@ -61,6 +63,10 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: struct }}
+          />;
           {this.props.headComponents}
           {css}
           <link
