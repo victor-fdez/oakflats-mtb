@@ -14,6 +14,7 @@ path: "/contact/"
 
 ## Event
 
-**Facebook:** OAKFLATSMTB
-
-**Instagram:** OAKFLATSMTB
+**Facebook**: [OAKFLATSMTB](https://www.facebook.com/Oakflats-MTB-738873469643155/)  
+  
+**Instagram**: [OAKFLATSMTB](https://www.instagram.com/oakflatsmtb/)
+  

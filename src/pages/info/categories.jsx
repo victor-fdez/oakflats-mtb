@@ -1,7 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { categories } from '../../data/categories.json'
+import Link from 'gatsby-link'
+import { categories, timezone, url } from '../../data/categories.json'
 import { SingleCol, Container } from '../../components/Typography'
+import moment from 'moment-timezone'
 
 const TableHeader = ({ headers }) => {
   const headings = headers
@@ -37,15 +39,12 @@ const Row = ({ headers, category }) => {
   const subcategories = category['subcategories'] || []
   const distance = category[headers['Distance']]
   const laps = category[headers['Laps']]
-  const startTime = new Date(category[headers['Start Time']])
+  const beginTime = moment(category[headers['Start Time']])
+    .tz(timezone)
+    .format('h:mm A z')
   let time
-  if (category[headers['Start Time']]) {
-    const meridian = startTime.getHours() >= 12 ? 'PM' : 'AM'
-    const minutes =
-      `${startTime.getMinutes()}`.length == 1
-        ? '0' + startTime.getMinutes()
-        : startTime.getMinutes()
-    time = `${startTime.getHours()}:${minutes} ${meridian}`
+  if (beginTime) {
+    time = beginTime
   } else {
     time = ''
   }
@@ -70,7 +69,9 @@ const Row = ({ headers, category }) => {
               <div>
                 <strong>{feeName}</strong>
               </div>
-              <div>${fee}</div>
+              <div>
+                <a href={url}>${fee}</a>
+              </div>
             </div>
           )
         })}

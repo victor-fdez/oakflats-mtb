@@ -7,6 +7,8 @@ import { css } from 'glamor'
 import Img from 'gatsby-image'
 import { parallaxChildren, registerNow, countdown } from './style.scss'
 import oakflatsLogo from '../../../static/img/oakflats-2018.png'
+import { timezone } from '../../../data/categories.json'
+import moment from 'moment-timezone'
 import './style.scss'
 
 const changePageMaps = () => {
@@ -90,15 +92,23 @@ class TopParallax extends React.Component {
 
   render() {
     const data = this.state
-    const { image, date, title, viewport: { width, height } } = data
+    const {
+      image,
+      date,
+      title,
+      viewport: { width, height },
+    } = data
     const options = {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric',
     }
-    const dateObj = new Date(date)
-    const dateFriendly = dateObj.toLocaleDateString('en-US', options)
+    const startTime = moment(date).tz(timezone)
+    const dateObj = startTime.toDate()
+    const dateFriendly = startTime.calendar(null, {
+      sameElse: 'dddd, MMMM Do YYYY [at] h:mm A z',
+    })
     return (
       <ParallaxProvider>
         <ParallaxBanner
