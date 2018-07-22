@@ -16,5 +16,5 @@ path: "/contact/"
 
 **Facebook**: [OAKFLATSMTB](https://www.facebook.com/Oakflats-MTB-738873469643155/)  
   
-**Instagram**: [OAKFLATSMTB](https://www.instagram.com/oakflatsmtb/)
+**Instagram**: [OAKFLATSMTB](https://www.instagram.com/oakflatsmtb/)  
   

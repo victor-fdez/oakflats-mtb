@@ -56,16 +56,16 @@ const Row = ({ headers, category }) => {
         {longName}
         <br />
         <strong>{name}</strong>
-        {subcategories.map(subcat => <div>{subcat}</div>)}
+        {subcategories.map((subcat, index) => <div key={index}>{subcat}</div>)}
       </td>
       <td className="text-center align-middle">{time}</td>
       <td className="text-center align-middle">{laps}</td>
       <td className="text-center align-middle">{distance} miles</td>
       <td className="text-center align-middle">{license}</td>
       <td className="text-center align-middle">
-        {entryFees.map(([feeName, fee]) => {
+        {entryFees.map(([feeName, fee], index) => {
           return (
-            <div>
+            <div key={index}>
               <div>
                 <strong>{feeName}</strong>
               </div>
@@ -97,9 +97,11 @@ const Categories = ({}) => {
           <table className="table">
             <caption>{'list of categories'}</caption>
             <TableHeader headers={headings} />
-            {categories.map(category => (
-              <Row headers={headers} category={category} />
-            ))}
+            <tbody>
+              {categories.map((category, index) => (
+                <Row key={index} headers={headers} category={category} />
+              ))}
+            </tbody>
           </table>
         </div>
       </SingleCol>

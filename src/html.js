@@ -66,7 +66,7 @@ export default class HTML extends React.Component {
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: struct }}
-          />;
+          />
           {this.props.headComponents}
           {css}
           <link
